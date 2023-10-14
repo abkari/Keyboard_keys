@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Keyboard</title>
+</head>
+<body>
+    <div id="keyboard">
+        <!--
+        <div class="key">C</div>
+        <div class="key">S</div>
+        <div class="key">S</div>
+        -->
+    </div>
+
+    <script>
+        const keyboard = document.getElementById("keyboard")
+        const name = window.prompt("Your name?")
+
+        for(c in name)
+        {
+            let temp = document.createElement("div")
+            temp.className = "key"
+            temp.textContent = name[c].toUpperCase()
+            keyboard.appendChild(temp)
+        }
+    </script>
+</body>
+</html>
